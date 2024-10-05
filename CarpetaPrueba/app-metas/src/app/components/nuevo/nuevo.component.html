@@ -1,6 +1,6 @@
 <section>
     <div class="tarjeta">
-        <form [formGroup]="formularioDeMetas" class="p-4">
+        <form [formGroup]="formularioDeMetas" class="p-4" (ngSubmit)="subirFormulario">
             <label class="label">
                 Describe tu meta
                 <input type="text" class="input" placeholder="Ej. 52 caminatas" formControlName="detalles">
@@ -10,12 +10,36 @@
                 <div class="flex mb-6">
                     <input type="text" formControlName="eventos" class="input mr-6">
                    <select class="input" id="">
-                    <option value="prueba"></option>
-                    <option value="prueba2"></option>
-                    <option value="prueba3"></option>
+                   @for(frecuencia of frecuencias; track frecuencia){
+                       <option [value]="frecuencia">{{frecuencia}}</option>
+                   }                   
                    </select>
                 </div>
             </label>
+            <label class="label">
+                ¿Cuantas veces deseas completar esta meta?
+                <input type="number" class="input" formArrayName="meta">
+            </label>
+            <label class="label">
+                ¿Tienes una fecha límite?
+                <input type="date" class="input" formControlName="plazo">
+            </label>
+            <label class="label">
+                ¿Cuantas veces haz completado ya esta meta?
+                <input type="number" class="input" formControlName="completado">
+            </label>
+            <label class="label">
+                Escoge el icono para la meta 
+                <select class="input" formControlName="icono">
+                    @for(icono of iconos; track icono){
+                        <option [value]="icono">{{icono}}</option>
+                    }
+                </select>
+            </label>
         </form>
+        <div class="botones">
+            <button class="boton boton--negro" (click)="subirFormulario()">Crear</button>
+            <button class="boton boton--gris">Cancelar</button>
+        </div>
     </div>
 </section>

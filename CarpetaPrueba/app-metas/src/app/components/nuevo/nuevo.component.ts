@@ -19,4 +19,10 @@ formularioDeMetas = new FormGroup({
   plazo: new FormControl(),
   completado: new FormControl(),
 })
+frecuencias = ["día", "semana", "mes", "año"]
+iconos = ["💻","🏃🏻‍♂️", "📚", "✈","💵"]
+
+subirFormulario(){
+  alert('Formulario subido')
+}
 }
