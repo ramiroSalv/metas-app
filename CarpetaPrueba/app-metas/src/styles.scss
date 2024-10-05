@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.boton{
+    @apply text-sm font-bold py-1 px-4 rounded-full;
+}
+.tarjeta {
+    @apply rounded-xl m-4 text-gray-700 text-xs mx-4 overflow-hidden bg-white shadow-gray-300 shadow-md h-xl flex p-2 justify-between;
+}
+.boton--negro{
+    @apply text-white hover:bg-gray-800 bg-gray-700;
+    box-shadow: 5px 6px 12px 3px rgba(83, 83, 100, 0.6), -6px;
+}
+.boton--rojo{
+    @apply text-red-500 border border-red-500 hover:bg-red-500;
+    box-shadow: 4px 5px 4px -2px rgba(72, 79, 96, 0.4), -6px;
+}
+
+.boton--gris{
+    @apply hover:bg-gray-200 bg-gray-100;
+    box-shadow: 4px 5px 4px -2px rgba(72, 79, 96, 0.4), -6px;
+}
+.label{
+    @apply block uppercase text-xs font-bold mb-6;
+}
