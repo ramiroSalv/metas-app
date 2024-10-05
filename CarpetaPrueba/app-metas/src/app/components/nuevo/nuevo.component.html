@@ -1,5 +1,10 @@
 <section>
     <div class="tarjeta">
-        <form [formGroup]="formularioDeMetas" class="p-4"></form>
+        <form [formGroup]="formularioDeMetas" class="p-4">
+            <label class="label">
+                Describe tu meta
+                <input type="text" class="input" placeholder="Ej. 52 caminatas" formControlName="detalles">
+            </label>
+        </form>
     </div>
 </section>
