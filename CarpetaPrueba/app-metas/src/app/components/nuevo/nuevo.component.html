@@ -9,7 +9,7 @@
                 ¿Con qué frecuencia deseas cumplir tu meta? <span>(Ej. 1 vez a la semana)</span>
                 <div class="flex mb-6">
                     <input type="text" formControlName="eventos" class="input mr-6">
-                   <select class="input" id="">
+                   <select class="input"  formControlName="periodo">
                    @for(frecuencia of frecuencias; track frecuencia){
                        <option [value]="frecuencia">{{frecuencia}}</option>
                    }                   
@@ -18,7 +18,7 @@
             </label>
             <label class="label">
                 ¿Cuantas veces deseas completar esta meta?
-                <input type="number" class="input" formArrayName="meta">
+                <input type="number" class="input" formControlName="meta">
             </label>
             <label class="label">
                 ¿Tienes una fecha límite?
